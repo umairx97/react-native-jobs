@@ -10,12 +10,12 @@ const SLIDE_DATA = [
   },
   {
     text: "Find Local Jobs",
-    color: "#009688",
+    color: "#CB4E4E",
     iconName: "ios-search"
   },
   {
-    text: "Get Hired!!!",
-    color: "#03A9F4",
+    text: "Get Hired!!",
+    color: "#f48b03",
     iconName: "ios-checkmark-circle"
   }
 ];

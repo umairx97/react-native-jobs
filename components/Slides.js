@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   },
   slideText: {
     color: "white",
-    fontSize: 20
+    fontSize: 20, 
+    fontWeight: 'bold'
   }
 });
