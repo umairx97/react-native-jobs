@@ -1,0 +1,9 @@
+{
+  "expoServerPort": 19000,
+  "expoServerNgrokUrl": "https://kn-nrk.umairx97.react-native-jobs.exp.direct",
+  "packagerNgrokUrl": "https://packager.kn-nrk.umairx97.react-native-jobs.exp.direct",
+  "ngrokPid": 11448,
+  "packagerPort": 19001,
+  "packagerPid": 11400,
+  "devToolsPort": 19002
+}
