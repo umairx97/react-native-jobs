@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 export default class WelcomeScreen extends Component {
   render() {
     return (
-      <View>
+      <View style = {styles.container}>
         <Text> WelcomeScreen </Text>
         <Text> WelcomeScreen </Text>
         <Text> WelcomeScreen </Text>
@@ -13,3 +13,11 @@ export default class WelcomeScreen extends Component {
     );
   }
 }
+
+styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
