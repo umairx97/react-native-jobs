@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
 
 export default class AuthScreen extends Component {
+  
+  
   render() {
     return (
-      <View style = {styles.container}>
+      <View style={styles.container}>
         <Text> AuthScreen </Text>
         <Text> AuthScreen </Text>
         <Text> AuthScreen </Text>
@@ -13,7 +15,6 @@ export default class AuthScreen extends Component {
     );
   }
 }
-
 
 styles = StyleSheet.create({
   container: {
