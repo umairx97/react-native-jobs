@@ -13,10 +13,16 @@ import MapScreen from "./screens/MapScreen";
 import DeckScreen from "./screens/DeckScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import { Provider } from "react-redux";
+import { store } from "./Store";
 
 class App extends React.Component {
   render() {
-    return <MainNavigator />;
+    return (
+      <Provider store={store}>
+        <MainNavigator />
+      </Provider>
+    );
   }
 }
 
