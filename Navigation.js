@@ -16,7 +16,6 @@ import SettingsScreen from "./screens/SettingsScreen";
 import { Provider } from "react-redux";
 // import { store } from "./Store";
 
-
 export const MainNavigator = createBottomTabNavigator({
   welcome: {
     screen: WelcomeScreen
