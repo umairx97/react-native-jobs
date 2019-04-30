@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { connect } from "react-redux";
+import * as actions from '../Store/actions'; 
+import {Provider} from 'react-redux'
+import {store} from '../Store' 
 
-export default class AuthScreen extends Component {
-  
+
+
+class AuthScreen extends Component {
+
+  componentDidMount() {
+    this.props.asyncFacebookLogin();
+  }
   
   render() {
     return (
+
       <View style={styles.container}>
         <Text> AuthScreen </Text>
         <Text> AuthScreen </Text>
@@ -23,3 +33,7 @@ styles = StyleSheet.create({
     justifyContent: "center"
   }
 });
+
+
+
+export default connect(null,actions)(AuthScreen)
