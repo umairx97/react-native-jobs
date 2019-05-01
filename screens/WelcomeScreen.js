@@ -1,6 +1,9 @@
+import _ from "lodash";
 import React, { Component } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, AsyncStorage } from "react-native";
 import Slides from "../components/Slides";
+
+import { AppLoading } from "expo";
 
 const SLIDE_DATA = [
   {
@@ -21,8 +24,20 @@ const SLIDE_DATA = [
 ];
 
 export default class WelcomeScreen extends Component {
-  
+  state = {
+    token: null
+  };
 
+  async componentWillMount() {
+    let token = await AsyncStorage.getItem("fb_token");
+
+    if (token) {
+      this.props.navigation.navigate("map");
+      this.setState({ token });
+    } else {
+      this.setState({ token: false });
+    }
+  }
 
   /* Navigation used for the last slide button */
   onSlidesComplete = () => {
@@ -30,6 +45,9 @@ export default class WelcomeScreen extends Component {
   };
 
   render() {
+    if (_.isNull(this.state.token)) {
+      return <AppLoading />;
+    }
     return (
       <View style={styles.container}>
         <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />

@@ -6,15 +6,13 @@ import { Provider } from "react-redux";
 import { store } from "../Store";
 
 class AuthScreen extends Component {
-
   componentWillReceiveProps(nextProps) {
     this.onAuthComplete(nextProps);
   }
 
   // Uncomment to start with fresh state
   // componentWillMount() {
-  //   AsyncStorage.removeItem('fb_token')
-
+  //   AsyncStorage.removeItem("fb_token");
   // }
 
   componentDidMount() {
@@ -29,14 +27,7 @@ class AuthScreen extends Component {
   };
 
   render() {
-    return (
-      <View style={styles.container}>
-        <Text> AuthScreen </Text>
-        <Text> AuthScreen </Text>
-        <Text> AuthScreen </Text>
-        <Text> AuthScreen </Text>
-      </View>
-    );
+    return <View />;
   }
 }
 
