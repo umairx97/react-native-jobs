@@ -18,12 +18,18 @@ import { Provider } from "react-redux";
 
 export const MainNavigator = createBottomTabNavigator({
   welcome: {
-    screen: WelcomeScreen
+    screen: WelcomeScreen,
+    navigationOptions: {
+      tabBarVisible: false
+    }
   },
   auth: {
     screen: AuthScreen
   },
   main: {
+    navigationOptions: {
+      tabBarVisible: false
+    },
     screen: createBottomTabNavigator({
       map: {
         screen: MapScreen

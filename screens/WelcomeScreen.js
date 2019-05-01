@@ -23,10 +23,6 @@ const SLIDE_DATA = [
 export default class WelcomeScreen extends Component {
   
 
-  static navigationOptions = ({ navigation }) => ({
-    tabBarVisible: false
-  });
-
 
   /* Navigation used for the last slide button */
   onSlidesComplete = () => {

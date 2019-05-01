@@ -1,6 +1,6 @@
-import {combineReducers} from 'redux'
-import {user_reducer} from './user_reducer';
+import { combineReducers } from "redux";
+import { facebook_auth } from "./facebook_auth";
 
-export const rootReducer = combineReducers({ 
-    user_reducer
-})
+export const rootReducer = combineReducers({
+  facebook_auth
+});
