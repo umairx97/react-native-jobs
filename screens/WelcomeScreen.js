@@ -28,6 +28,7 @@ export default class WelcomeScreen extends Component {
     token: null
   };
 
+  // Checks if the token exists then redirects to maps page
   async componentWillMount() {
     let token = await AsyncStorage.getItem("fb_token");
 

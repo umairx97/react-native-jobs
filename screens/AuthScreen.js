@@ -16,10 +16,12 @@ class AuthScreen extends Component {
   // }
 
   componentDidMount() {
+    // Async redux middleware for facebook login
     this.props.asyncFacebookLogin();
     this.onAuthComplete(this.props);
   }
 
+  // Redirects to maps after authentication
   onAuthComplete = props => {
     if (props.token) {
       this.props.navigation.navigate("map");
