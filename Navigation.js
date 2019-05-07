@@ -6,8 +6,6 @@ import {
   createStackNavigator
 } from "react-navigation";
 
-
-
 import Icon from "react-native-vector-icons/Ionicons";
 
 // Screens
@@ -24,8 +22,7 @@ export const MainNavigator = createBottomTabNavigator({
   welcome: {
     screen: WelcomeScreen,
     navigationOptions: {
-      tabBarVisible: false, 
-      
+      tabBarVisible: false
     }
   },
   auth: {
@@ -39,23 +36,23 @@ export const MainNavigator = createBottomTabNavigator({
       map: {
         screen: MapScreen,
         navigationOptions: {
-          tabBarIcon: ({tintColor}) => (
-            <Icon name="ios-compass" size={25} color= {tintColor} />
-          ), 
+          tabBarIcon: ({ tintColor }) => (
+            <Icon name="ios-compass" size={25} color={tintColor} />
+          ),
 
           tabBarOptions: {
-            activeTintColor: '#38ACEC',
+            activeTintColor: "#38ACEC"
           }
         }
       },
       deck: {
         screen: DeckScreen,
         navigationOptions: {
-          tabBarIcon: ({tintColor}) => (
+          tabBarIcon: ({ tintColor }) => (
             <Icon name="ios-briefcase" size={25} color={tintColor} />
-          ), 
+          ),
           tabBarOptions: {
-            activeTintColor: '#38ACEC',
+            activeTintColor: "#38ACEC"
           }
         }
       },
@@ -71,11 +68,11 @@ export const MainNavigator = createBottomTabNavigator({
           },
           {
             navigationOptions: {
-              tabBarIcon: ({tintColor}) => (
+              tabBarIcon: ({ tintColor }) => (
                 <Icon name="ios-paper" size={25} color={tintColor} />
-              ), 
+              ),
               tabBarOptions: {
-                activeTintColor: '#38ACEC',
+                activeTintColor: "#38ACEC"
               }
             }
           }
